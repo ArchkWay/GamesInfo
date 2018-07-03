@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Geyms</string>
+
+    <string name="games">Games</string>
+    <string name="companies">Companies</string>
+    <string name="favorite">Favorite</string>
+    <string name="settings">Settings</string>
+    <string name="nav_settings">Settings</string>
+
 </resources>
