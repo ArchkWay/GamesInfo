@@ -6,5 +6,7 @@
     <string name="favorite">Favorite</string>
     <string name="settings">Settings</string>
     <string name="nav_settings">Settings</string>
+    <string name="refresh">Refresh</string>
+
 
 </resources>
