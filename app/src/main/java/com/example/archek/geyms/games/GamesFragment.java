@@ -1,5 +1,6 @@
 package com.example.archek.geyms.games;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,29 +16,27 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.archek.geyms.GameDetailsActivity.GameDetailsActivity;
 import com.example.archek.geyms.R;
 import com.example.archek.geyms.network.GbObjectResponse;
 import com.example.archek.geyms.network.GbObjectsListResponse;
 import com.example.archek.geyms.network.GiantBombService;
 import com.example.archek.geyms.network.RestApi;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class GamesFragment extends Fragment implements Toolbar.OnMenuItemClickListener {
+public class GamesFragment extends Fragment implements Toolbar.OnMenuItemClickListener, GamesAdapter.Callback {
 
     public static final String TAG = "33__";
     private static final int TOTAL_GAMES_COUNT = 64131;
 
     private GiantBombService service = RestApi.creteService( GiantBombService.class );
     private Random random = new Random(  );
-    private GamesAdapter adapter = new GamesAdapter();
+    private GamesAdapter adapter = new GamesAdapter( this  );
     private RecyclerView rvGames;
     private ProgressBar progressBar;
     @Nullable private Call<GbObjectsListResponse> call;
@@ -55,6 +54,12 @@ public class GamesFragment extends Fragment implements Toolbar.OnMenuItemClickLi
         progressBar = view.findViewById( R.id.progressBar );
         loadRandomGames();
        }
+    @Override
+    public void onGameClick(GbObjectResponse game){
+        Intent intent = GameDetailsActivity.makeIntent(getContext(),game);
+        startActivity( intent );
+    }
+
     private void loadRandomGames(){
         if(call != null && call.isExecuted()){
             return;

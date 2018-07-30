@@ -1,4 +1,5 @@
 package com.example.archek.geyms.network;
+
 import java.util.List;
 
 public class GbObjectsListResponse {
@@ -7,6 +8,5 @@ public class GbObjectsListResponse {
 
     public List <GbObjectResponse> getResults() {
         return results;
-}
-
+    }
 }
