@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_games"
+        android:title="@string/games"
+        android:icon="@drawable/ic_games"
+        />
+
+    <item
+        android:id="@+id/nav_companies"
+        android:title="@string/companies"
+        android:icon="@drawable/ic_companies"
+        />
+
+    <item
+        android:id="@+id/nav_favorite"
+        android:title="@string/favorite"
+        android:icon="@drawable/ic_favorite"
+        />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings"
+        />
+
+</menu>
