@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.example.archek.geyms.network.GbObjectResponse;
 import com.example.archek.geyms.games.GamesFragment;
+import com.example.archek.geyms.settings.SettingsFragment;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -26,22 +27,23 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
-
         if (savedInstanceState == null) {
-            GamesFragment gamesFragment = new GamesFragment();
-            replaceFragment(gamesFragment);
+            replaceFragment(new GamesFragment());
         }
     }
 
-
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == bottomNavigationView.getSelectedItemId()) {
+        if (bottomNavigationView.getSelectedItemId() != item.getItemId()) {
+            Fragment fragment = createFragment( item.getItemId());
+            replaceFragment( fragment );
+            }
             return true;
         }
-        Fragment fragment;
-        switch (item.getItemId()) {
+
+        private Fragment createFragment(int navItemId){
+            final Fragment fragment;
+            switch (navItemId){
             case R.id.nav_games:
                 fragment = new GamesFragment();
                 break;
@@ -59,13 +61,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
         }
         replaceFragment(fragment);
-        return true;
+        return fragment;
     }
 
     private void replaceFragment(Fragment fragment) {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragmentContainer, fragment)
-                .commit();
+        if(fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace( R.id.fragmentContainer, fragment )
+                    .commit();
+        }
     }
 }
