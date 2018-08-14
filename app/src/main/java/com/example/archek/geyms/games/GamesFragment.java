@@ -16,12 +16,13 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.archek.geyms.GameDetailsActivity.GameDetailsActivity;
+import com.example.archek.geyms.gamedetails.GameDetailsActivity;
 import com.example.archek.geyms.R;
 import com.example.archek.geyms.network.GbObjectResponse;
 import com.example.archek.geyms.network.GbObjectsListResponse;
 import com.example.archek.geyms.network.GiantBombService;
 import com.example.archek.geyms.network.RestApi;
+import com.example.archek.geyms.search.GamesSearchActivity;
 
 import java.util.Random;
 
@@ -52,6 +53,12 @@ public class GamesFragment extends Fragment implements Toolbar.OnMenuItemClickLi
         setupToolbar(view);
         setupRecyclerView(view);
         progressBar = view.findViewById( R.id.progressBar );
+        view.findViewById( R.id.fabSearch ).setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent( getContext(), GamesSearchActivity.class ) );
+            }
+        } );
         loadRandomGames();
        }
     @Override
