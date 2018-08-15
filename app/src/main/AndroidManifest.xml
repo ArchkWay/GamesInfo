@@ -22,6 +22,8 @@
         </activity>
 
         <activity android:name=".gamedetails.GameDetailsActivity"/>
+        <activity android:name=".companydetails.CompanyDetailsActivity"/>
+
 
         <activity android:name=".search.GamesSearchActivity"/>
     </application>

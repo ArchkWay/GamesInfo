@@ -7,9 +7,8 @@ public class GbObjectResponse {
     private Image image;
     private String guid;
     private String description;
-
-
-
+    private String location_country;
+    private String location_city;
 
 
     public Image getImage() {
@@ -37,6 +36,13 @@ public class GbObjectResponse {
         public String getSmallUrl() {
             return smallUrl;
         }
+    }
+    public String getCountry() {
+        return location_country;
+    }
+
+    public String getCity() {
+        return location_city;
     }
 
 }

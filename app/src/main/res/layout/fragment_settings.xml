@@ -34,7 +34,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
                     android:text="@string/games_amount"
+                    android:textColor="#444AAA"
                     />
 
                 <Spinner
@@ -45,7 +47,34 @@
                     />
 
 
+
                 </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/companies_amount"
+                    android:textColor="#444AAA"
+                    />
+
+                <Spinner
+                    android:id="@+id/spCompaniesAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/amount_options"
+                    />
+            </LinearLayout>
+
             </LinearLayout>
     </ScrollView>
 </FrameLayout>

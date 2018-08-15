@@ -6,14 +6,11 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 
-import com.example.archek.geyms.network.GbObjectResponse;
+import com.example.archek.geyms.companies.CompaniesFragment;
 import com.example.archek.geyms.games.GamesFragment;
 import com.example.archek.geyms.settings.SettingsFragment;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 

@@ -23,11 +23,14 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.example.archek.geyms.PrefsConst.SETTINGS_COMPANIES_AMOUNT;
+
 public class SettingsFragment extends Fragment {
 
     private SharedPreferences prefs;
     private SharedPreferences.Editor prefsEditor;
     private Spinner spGamesAmount;
+    private Spinner spCompaniesAmount;
 
     @Nullable
     @Override
@@ -43,6 +46,7 @@ public class SettingsFragment extends Fragment {
         prefsEditor = prefs.edit();
         ((Toolbar) view.findViewById( R.id.toolbar )).setTitle( R.string.settings );
         spGamesAmount = view.findViewById( R.id.spGamesAmount );
+        spCompaniesAmount = view.findViewById( R.id.spCompaniesAmount );
         setOnItemSelectedListeners();
         setSelections();
     }
@@ -50,6 +54,8 @@ public class SettingsFragment extends Fragment {
     private void setSelections() {
         int gamesAmount = prefs.getInt( PrefsConst.SETTINGS_GAME_AMOUNT,PrefsConst.SETTING_DEFAULT_AMOUNT );
         spGamesAmount.setSelection(getAmountIndex( gamesAmount ));
+        int companiesAmount = prefs.getInt( PrefsConst.SETTINGS_COMPANIES_AMOUNT,PrefsConst.SETTING_DEFAULT_AMOUNT );
+        spCompaniesAmount.setSelection(getAmountIndex( companiesAmount ));
     }
 
     private int getAmountIndex(int amount) {
@@ -62,6 +68,16 @@ public class SettingsFragment extends Fragment {
 
 
     private void setOnItemSelectedListeners(){
+        spCompaniesAmount.setOnItemSelectedListener( new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView <?> parent, View view, int position, long id) {
+                String amountString = parent.getItemAtPosition( position ).toString();
+                int amountInt = Integer.parseInt( amountString );
+                prefsEditor.putInt( PrefsConst.SETTINGS_COMPANIES_AMOUNT, amountInt ).apply();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent){ }
+        });
         spGamesAmount.setOnItemSelectedListener( new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView <?> parent, View view, int position, long id) {

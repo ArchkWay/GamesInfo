@@ -17,4 +17,10 @@ public interface GiantBombService {
     @GET("search/?api_key=0a80e1bbb07356d3658e6413b066b13824764567&format=json&field_list=name,image,deck,guid&resources=game")
     Call<GbObjectsListResponse> searchGames(@Query("query") String query,@Query( "limit" ) int limit);
 
+    @GET("companies/?api_key=0a80e1bbb07356d3658e6413b066b13824764567&format=json&field_list=name,image,deck,location_country,location_city&resources=game")
+    Call<GbObjectsListResponse> getCompanies(@Query( "limit" ) int limit, @Query( "offset" ) int offset);
+
+    @GET("company/{guid}/?api_key=0a80e1bbb07356d3658e6413b066b13824764567&format=json&field_list=description")
+    Call<GbSingleObjectResponse> getCompanyDetails(@Path("guid") String guid);
+
 }

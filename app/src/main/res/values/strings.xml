@@ -9,4 +9,5 @@
     <string name="error">Error</string>
     <string name="search">search</string>
     <string name="games_amount">games_amount:</string>
+    <string name="companies_amount">companies amount:</string>
 </resources>
