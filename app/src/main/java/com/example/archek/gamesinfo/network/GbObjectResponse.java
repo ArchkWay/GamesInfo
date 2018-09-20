@@ -29,6 +29,13 @@ public class GbObjectResponse {
     public String getDescription() {
         return description;
     }
+    public String getCountry() {
+        return location_country;
+    }
+    public String getCity() {
+        return location_city;
+    }
+
 
     public static class Image{
         private String smallUrl;
@@ -36,13 +43,6 @@ public class GbObjectResponse {
         public String getSmallUrl() {
             return smallUrl;
         }
-    }
-    public String getCountry() {
-        return location_country;
-    }
-
-    public String getCity() {
-        return location_city;
     }
 
 }

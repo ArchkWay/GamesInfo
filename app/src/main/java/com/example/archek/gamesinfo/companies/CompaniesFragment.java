@@ -21,13 +21,11 @@ import android.widget.Toast;
 import com.example.archek.geyms.PrefsConst;
 import com.example.archek.geyms.R;
 import com.example.archek.geyms.companydetails.CompanyDetailsActivity;
-import com.example.archek.geyms.gamedetails.GameDetailsActivity;
-import com.example.archek.geyms.games.GamesAdapter;
 import com.example.archek.geyms.network.GbObjectResponse;
 import com.example.archek.geyms.network.GbObjectsListResponse;
 import com.example.archek.geyms.network.GiantBombService;
 import com.example.archek.geyms.network.RestApi;
-import com.example.archek.geyms.search.GamesSearchActivity;
+import com.example.archek.geyms.search.CompaniesSearchActivity;
 
 import java.util.Random;
 
@@ -39,7 +37,7 @@ public class CompaniesFragment extends Fragment implements Toolbar.OnMenuItemCli
 
     private static final int TOTAL_COMPANIES_AMOUNT = 16855;
 
-    private GiantBombService service = RestApi.creteService( GiantBombService.class );
+    private GiantBombService service = RestApi.createService( GiantBombService.class );
     private Random random = new Random(  );
     private CompaniesAdapter adapter = new CompaniesAdapter( this  );
     private RecyclerView rvCompanies;
@@ -60,12 +58,12 @@ public class CompaniesFragment extends Fragment implements Toolbar.OnMenuItemCli
         setupToolbar(view);
         setupRecyclerView(view);
         progressBar = view.findViewById( R.id.progressBar );
-//        view.findViewById( R.id.fabSearch ).setOnClickListener( new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity( new Intent( getContext(), GamesSearchActivity.class ) );
-//            }
-//        } );
+        view.findViewById( R.id.fabSearchCo ).setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent( getContext(), CompaniesSearchActivity.class ) );
+            }
+        } );
         loadRandomCompanies();
        }
 

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private BottomNavigationView bottomNavigationView;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {//from MainActivity load navigation bottom
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.bottomNavigation);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {//load different fragments in click
         if (bottomNavigationView.getSelectedItemId() != item.getItemId()) {
             Fragment fragment = createFragment( item.getItemId());
             replaceFragment( fragment );
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.nav_companies:
                 fragment = new CompaniesFragment();
                 break;
-            case R.id.nav_favorite:
+            case R.id.nav_favorite://not finished
                 fragment = new FavoriteFragment();
                 break;
             case R.id.nav_settings:
