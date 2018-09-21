@@ -18,7 +18,6 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-<<<<<<< HEAD:app/src/main/java/com/example/archek/gamesinfo/companies/CompaniesFragment.java
 import com.example.archek.gamesinfo.PrefsConst;
 import com.example.archek.gamesinfo.R;
 import com.example.archek.gamesinfo.companydetails.CompanyDetailsActivity;
@@ -27,16 +26,6 @@ import com.example.archek.gamesinfo.network.GbObjectsListResponse;
 import com.example.archek.gamesinfo.network.GiantBombService;
 import com.example.archek.gamesinfo.network.RestApi;
 import com.example.archek.gamesinfo.search.CompaniesSearchActivity;
-=======
-import com.example.archek.geyms.PrefsConst;
-import com.example.archek.geyms.R;
-import com.example.archek.geyms.companydetails.CompanyDetailsActivity;
-import com.example.archek.geyms.network.GbObjectResponse;
-import com.example.archek.geyms.network.GbObjectsListResponse;
-import com.example.archek.geyms.network.GiantBombService;
-import com.example.archek.geyms.network.RestApi;
-import com.example.archek.geyms.search.CompaniesSearchActivity;
->>>>>>> 35643a588e3f291af97a0821c622af3dfbebc4c8:app/src/main/java/com/example/archek/gamesinfo/companies/CompaniesFragment.java
 
 import java.util.Random;
 

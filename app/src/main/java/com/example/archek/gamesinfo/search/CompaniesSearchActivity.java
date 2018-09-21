@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 package com.example.archek.gamesinfo.search;
-=======
-package com.example.archek.geyms.search;
->>>>>>> 35643a588e3f291af97a0821c622af3dfbebc4c8
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,7 +13,6 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-<<<<<<< HEAD
 import com.example.archek.gamesinfo.R;
 import com.example.archek.gamesinfo.companies.CompaniesAdapter;
 import com.example.archek.gamesinfo.companydetails.CompanyDetailsActivity;
@@ -25,15 +20,6 @@ import com.example.archek.gamesinfo.network.GbObjectResponse;
 import com.example.archek.gamesinfo.network.GbObjectsListResponse;
 import com.example.archek.gamesinfo.network.GiantBombService;
 import com.example.archek.gamesinfo.network.RestApi;
-=======
-import com.example.archek.geyms.R;
-import com.example.archek.geyms.companies.CompaniesAdapter;
-import com.example.archek.geyms.companydetails.CompanyDetailsActivity;
-import com.example.archek.geyms.network.GbObjectResponse;
-import com.example.archek.geyms.network.GbObjectsListResponse;
-import com.example.archek.geyms.network.GiantBombService;
-import com.example.archek.geyms.network.RestApi;
->>>>>>> 35643a588e3f291af97a0821c622af3dfbebc4c8
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -52,14 +38,14 @@ public class CompaniesSearchActivity extends AppCompatActivity implements Compan
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_search_companies );
-        findViewById( R.id.btnBackCo ).setOnClickListener( this );
+        findViewById( R.id.btnBack ).setOnClickListener( this );
         progressBar = findViewById( R.id.progressBar );
         rvCompanies = findViewById( R.id.rvCompanies );
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager( this );
         rvCompanies.setAdapter( adapter );
         rvCompanies.setLayoutManager( layoutManager );
 
-        EditText etSearch = findViewById( R.id.etSearchCo );
+        EditText etSearch = findViewById( R.id.etSearch );
         etSearch.addTextChangedListener( new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -120,7 +106,7 @@ public class CompaniesSearchActivity extends AppCompatActivity implements Compan
 
     @Override
     public void onClick(View v){
-        if(v.getId() == R.id.btnBackCo){
+        if(v.getId() == R.id.btnBack){
             onBackPressed();
         }
     }

@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 package com.example.archek.gamesinfo.network;
-=======
-package com.example.archek.geyms.network;
->>>>>>> 35643a588e3f291af97a0821c622af3dfbebc4c8
+
+import com.example.archek.gamesinfo.network.GbObjectsListResponse;
+import com.example.archek.gamesinfo.network.GbSingleObjectResponse;
 
 import retrofit2.Call;
 import retrofit2.http.DELETE;
