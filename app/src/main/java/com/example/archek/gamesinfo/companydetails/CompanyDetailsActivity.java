@@ -36,7 +36,7 @@ public class CompanyDetailsActivity extends AppCompatActivity{
     private static final String EXTRA_COMPANY_PICTURE_URL = "EXTRA_COMPANY_PICTURE_URL";
 
 
-    private GiantBombService service = RestApi.creteService( GiantBombService.class );
+    private GiantBombService service = RestApi.createService( GiantBombService.class );
     private ProgressBar progressBar;
     private TextView tvDescription;
     private ViewGroup vgContent;
@@ -45,7 +45,6 @@ public class CompanyDetailsActivity extends AppCompatActivity{
     public static Intent makeIntent(Context context, GbObjectResponse company){
         return new Intent( context,CompanyDetailsActivity.class)
             .putExtra( CompanyDetailsActivity.EXTRA_COMPANY_NAME, company.getName())
-            .putExtra( CompanyDetailsActivity.EXTRA_COMPANY_DECK, company.getDeck())
             .putExtra( CompanyDetailsActivity.EXTRA_COMPANY_DECK, company.getDeck())
             .putExtra( CompanyDetailsActivity.EXTRA_COMPANY_PICTURE_URL, company.getImage().getSmallUrl());
     }

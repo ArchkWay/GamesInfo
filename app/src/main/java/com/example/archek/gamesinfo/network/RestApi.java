@@ -24,7 +24,7 @@ final public class RestApi {
             .addConverterFactory( createConverterFactory() )
             .build();
 
-    public static <S> S creteService(Class<S> klass) {
+    public static <S> S createService(Class<S> klass) {
         return retrofit.create( klass );
     }
 

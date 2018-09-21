@@ -37,7 +37,7 @@ public class GamesFragment extends Fragment implements Toolbar.OnMenuItemClickLi
 
     private static final int TOTAL_GAMES_COUNT = 63804;
 
-    private GiantBombService service = RestApi.creteService( GiantBombService.class );
+    private GiantBombService service = RestApi.createService( GiantBombService.class );
     private Random random = new Random(  );
     private GamesAdapter adapter = new GamesAdapter( this  );
     private RecyclerView rvGames;
@@ -78,7 +78,7 @@ public class GamesFragment extends Fragment implements Toolbar.OnMenuItemClickLi
         }
         showLoading();
         int offset = random.nextInt(TOTAL_GAMES_COUNT-gamesAmount+1);
-        call =service.getGames( gamesAmount, offset );
+        call = service.getGames( gamesAmount, offset );
         Log.d("33_", toString());
         //noinspection ConstantConditions
         call.enqueue( new Callback <GbObjectsListResponse>() {
