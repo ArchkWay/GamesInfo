@@ -12,7 +12,11 @@
         >
 
         <android.support.v7.widget.Toolbar
+<<<<<<< HEAD
             android:id="@+id/toolbarCo"
+=======
+            android:id="@+id/toolbar"
+>>>>>>> 35643a588e3f291af97a0821c622af3dfbebc4c8
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -37,7 +41,11 @@
                     >
 
                     <ImageView
+<<<<<<< HEAD
                         android:id="@+id/btnBackCo"
+=======
+                        android:id="@+id/btnBack"
+>>>>>>> 35643a588e3f291af97a0821c622af3dfbebc4c8
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
@@ -45,7 +53,11 @@
                         />
 
                     <EditText
+<<<<<<< HEAD
                         android:id="@+id/etSearchCo"
+=======
+                        android:id="@+id/etSearch"
+>>>>>>> 35643a588e3f291af97a0821c622af3dfbebc4c8
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="16dp"
@@ -64,7 +76,11 @@
         <include layout="@layout/progress_bar"/>
 
     <android.support.v7.widget.RecyclerView
+<<<<<<< HEAD
        android:id="@+id/rvCompanies"
+=======
+       android:id="@+id/rvGames"
+>>>>>>> 35643a588e3f291af97a0821c622af3dfbebc4c8
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize"
