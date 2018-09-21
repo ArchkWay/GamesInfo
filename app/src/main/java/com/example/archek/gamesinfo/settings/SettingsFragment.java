@@ -1,4 +1,4 @@
-package com.example.archek.geyms.settings;
+package com.example.archek.gamesinfo.settings;
 
 import android.annotation.SuppressLint;
 import android.support.v4.app.Fragment;
@@ -16,14 +16,14 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
-import com.example.archek.geyms.PrefsConst;
-import com.example.archek.geyms.R;
+import com.example.archek.gamesinfo.PrefsConst;
+import com.example.archek.gamesinfo.R;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.example.archek.geyms.PrefsConst.SETTINGS_COMPANIES_AMOUNT;
+import static com.example.archek.gamesinfo.PrefsConst.SETTINGS_COMPANIES_AMOUNT;
 
 public class SettingsFragment extends Fragment {
 

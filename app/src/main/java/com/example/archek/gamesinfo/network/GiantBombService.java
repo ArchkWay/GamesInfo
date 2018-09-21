@@ -1,4 +1,4 @@
-package com.example.archek.geyms.network;
+package com.example.archek.gamesinfo.network;
 
 import retrofit2.Call;
 import retrofit2.http.DELETE;

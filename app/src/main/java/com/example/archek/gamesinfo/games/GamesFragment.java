@@ -1,4 +1,4 @@
-package com.example.archek.geyms.games;
+package com.example.archek.gamesinfo.games;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,14 +18,14 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.archek.geyms.PrefsConst;
-import com.example.archek.geyms.gamedetails.GameDetailsActivity;
-import com.example.archek.geyms.R;
-import com.example.archek.geyms.network.GbObjectResponse;
-import com.example.archek.geyms.network.GbObjectsListResponse;
-import com.example.archek.geyms.network.GiantBombService;
-import com.example.archek.geyms.network.RestApi;
-import com.example.archek.geyms.search.GamesSearchActivity;
+import com.example.archek.gamesinfo.PrefsConst;
+import com.example.archek.gamesinfo.gamedetails.GameDetailsActivity;
+import com.example.archek.gamesinfo.R;
+import com.example.archek.gamesinfo.network.GbObjectResponse;
+import com.example.archek.gamesinfo.network.GbObjectsListResponse;
+import com.example.archek.gamesinfo.network.GiantBombService;
+import com.example.archek.gamesinfo.network.RestApi;
+import com.example.archek.gamesinfo.search.GamesSearchActivity;
 
 import java.util.Random;
 

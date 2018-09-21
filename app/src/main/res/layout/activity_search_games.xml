@@ -12,7 +12,7 @@
         >
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarCo"
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -37,7 +37,7 @@
                     >
 
                     <ImageView
-                        android:id="@+id/btnBackCo"
+                        android:id="@+id/btnBack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
@@ -45,7 +45,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/etSearchCo"
+                        android:id="@+id/etSearch"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="16dp"
@@ -64,7 +64,7 @@
         <include layout="@layout/progress_bar"/>
 
     <android.support.v7.widget.RecyclerView
-       android:id="@+id/rvCompanies"
+       android:id="@+id/rvGames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize"

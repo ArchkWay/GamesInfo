@@ -1,6 +1,6 @@
-package com.example.archek.geyms.network;
+package com.example.archek.gamesinfo.network;
 
-import com.example.archek.geyms.BuildConfig;
+import com.example.archek.gamesinfo.BuildConfig;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.GsonBuilder;
 

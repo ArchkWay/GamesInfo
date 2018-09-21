@@ -1,4 +1,4 @@
-package com.example.archek.geyms;
+package com.example.archek.gamesinfo;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,9 +8,9 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.example.archek.geyms.companies.CompaniesFragment;
-import com.example.archek.geyms.games.GamesFragment;
-import com.example.archek.geyms.settings.SettingsFragment;
+import com.example.archek.gamesinfo.companies.CompaniesFragment;
+import com.example.archek.gamesinfo.games.GamesFragment;
+import com.example.archek.gamesinfo.settings.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 

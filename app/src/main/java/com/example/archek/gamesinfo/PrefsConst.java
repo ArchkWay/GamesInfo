@@ -1,4 +1,4 @@
-package com.example.archek.geyms;
+package com.example.archek.gamesinfo;
 
 public interface PrefsConst {
 

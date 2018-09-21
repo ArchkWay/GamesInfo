@@ -1,4 +1,4 @@
-package com.example.archek.geyms.network;
+package com.example.archek.gamesinfo.network;
 
 import java.util.List;
 
